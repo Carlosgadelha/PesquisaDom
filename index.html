@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorios GITHUB</title>
+</head>
+<body>
+    <header class="header escondido">
+        
+        <input type="text" placeholder="Digite nome ou linguagem" data-identifier="enter-filtro">
+        <button type="button" onclick="filtrar()" data-identifier="filtrar">Filtrar</button>
+        <!-- <button type="button" onclick="filtrar()" data-identifier="PesquisarPorLinguagens">Pesquisar Por Linguagens</button> -->
+
+    </header>
+
+    <main>
+        <section class="telaInicial" >
+
+            <img src="./imagens/logo.png">
+            <input type="text" placeholder="Digite a organização" data-identifier="enter-organizacao">
+            <button type="button" onclick="preloader()" data-identifier="Pesquisar">Pesquisar</button>
+            <img src="./imagens/preloader.gif" class="preloader escondido">
+            <p class="escondido">Pesquisando...</p>
+    
+        </section>
+        <section class="repositorios escondido">
+
+        </section>
+
+    </main>
+
+    <aside class=" barraLateral escondido">
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
