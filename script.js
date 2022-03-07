@@ -22,6 +22,10 @@ function preloader(){
     }
 }
 
+function reiniciar(){
+    window.location.reload()
+}
+
 function pesquisar(organizacao){
 
     const promise = axios.get(`https://api.github.com/orgs/${organizacao}/repos`);
@@ -38,7 +42,7 @@ function pesquisar(organizacao){
     })
     
     promise.catch(()=>{
-        window.location.reload()
+        reiniciar()
     });
 
 }
@@ -111,10 +115,7 @@ function exibirNaTela(dados){
                 <div class= 'repositorio'>
                     <h2>${element.name}</h2>
                     <p>${element.language}</p>
-                    <div class='informacoes'>
-                      <p> teste</p>
-                    
-                    </div>
+
                 </div>
         
                ` 
@@ -162,7 +163,6 @@ function exibirNaTelaLateral(dados){
         <h1> ${nomeOrganizacao}</h1>
 
     `
-
 }
     
 filtro.addEventListener('input', (event) => {
@@ -173,7 +173,6 @@ filtro.addEventListener('input', (event) => {
 
 // console.log(document.body)
 
-
 function criarElementos(){
 
     let divNova = document.createElement("div");
@@ -182,5 +181,10 @@ function criarElementos(){
 
 }
 
-criarElementos()
+// criarElementos()
+
+function ContarRepositorios(){
+    qnt_repositorios = document.querySelector('.repositorios').childElementCount
+    console.log(qnt_repositorios)
+}
 
